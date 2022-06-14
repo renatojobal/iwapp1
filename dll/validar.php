@@ -11,18 +11,18 @@
 			$miconexion->consulta("select * from usuarios where correo='$username' and clave='$userpass'");
 			$list=$miconexion->consulta_lista();
 			if ($list[0]) {
-               $_SESSION['autentificado'] = TRUE;
-               $_SESSION['username'] = $list[1];
-		         $_SESSION['iduser'] = $list[0];
-		         $_SESSION['roll'] = $list[4]; 
-               $_SESSION['local_path']=$local_path;
+                $_SESSION['autentificado'] = TRUE;
+                $_SESSION['username'] = $list[1]." ".$list[2];
+		    	//$_SESSION['iduser'] = $list[5];
+		        $_SESSION['roll'] = $list[5]; 
+                $_SESSION['local_path']=$local_path;
                echo "<script>location.href='../administrator/dashboard.php'</script>";
 			}else{
 				echo '<script>alert("Datos Incorrectos...");</script>';
-		        echo "<script>location.href='../'</script>";
+		        echo "<script>location.href='../internas/login.php'</script>";
 			}
    }else{
 	echo '<script>alert("Datos Incorrectos...");</script>';
-	echo "<script>location.href='../'</script>";
+	echo "<script>location.href='../internas/login.php'</script>";
 }
 ?>
