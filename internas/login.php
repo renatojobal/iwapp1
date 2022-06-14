@@ -13,26 +13,26 @@
 	<nav class="menuPrincipal">
 		<a href="../">Inicio</a>
 		<a href="">Empresa</a>
-		<a href="contactos.php">Contactos</a>
+		<a href="contactos.php">Registro</a>
 		<a href="listados.php">Listado</a>
 		<a href="login.php">Login</a>
 	</nav>
 	
 	<main>
 		<div class="boxCentrado">
-		<h2 class="h2Home">Contactos</h2>
+		<h2 class="h2Home">Ingeso al sistema</h2>
 		<form method="post" action="../dll/validar.php">
 			<div class="grupoInput">
 				<label for="correo">Correo</label>
-				<input type="text" name="correo" id="correo" placeholder="Ingrese su correo">
+				<input type="email" name="correo" id="correo" placeholder="Ingrese su correo">
 			</div>
 			<div class="grupoInput">
-				<label for="clave">Clave</label>
-				<input type="password" name="clave" id="clave" placeholder="Ingrese su clave">
+				<label for="clave">Contraseña</label>
+				<input type="password" name="clave" id="clave" placeholder="Ingrese su Contraseña">
 			</div>
-
+			
 			<div class="grupoInput">
-			 <button type="submit" value="Procesar" class="btn-submit">Login</button>
+			 <button type="submit" value="Procesar" class="btn-submit">Ingresar</button>
 			</div>
 		</form>
 		</div>
